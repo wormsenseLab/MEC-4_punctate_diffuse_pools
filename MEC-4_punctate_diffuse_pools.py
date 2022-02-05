@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct  9 05:01:01 2021
-
-@author: alkad
-"""
-
 #import basic libraries for plotting, data structures and signal processing
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
@@ -20,10 +13,10 @@ import seaborn as sns
 import shutil
 
 #%%
-fpath = 'G:/My Drive/ECM manuscript/github codes/MEC-4_punctate_diffuse_pools/sample_data/input_files/' #filepath where the data is
+fpath = 'G:/My Drive/ECM manuscript/github codes/MEC-4_punctate_diffuse_pools/sample_data/input_files/' #filepath where the input files are
 imgfiles = fnmatch.filter(os.listdir(fpath), '*.tif')
 
-dfpath = 'G:/My Drive/ECM manuscript/github codes/MEC-4_punctate_diffuse_pools/sample_data/output_files/'                
+dfpath = 'G:/My Drive/ECM manuscript/github codes/MEC-4_punctate_diffuse_pools/sample_data/output_files/'   #filepath where output files will be created
 toa = str(datetime.datetime.today()).split()
 today = toa[0]
 now = toa[1]
@@ -60,7 +53,6 @@ def peakfinder(nf,height):
     return(peaks_pos, pd, pw, pmi, nonpeakf)
 
 #%%
-code_version = os.path.basename(__file__)                  #stores the filename of the current script in f
 mu_per_px = 0.126     #pixels to microns conversion factor
 
 #specify columns of the pandas dataframe and excel sheets
